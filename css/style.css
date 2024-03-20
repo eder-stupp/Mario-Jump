@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 707px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #e0f6ff);
+}
+
+.grass {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    animation: grass-animation 1.9s infinite linear;
+}
+
+.grass2 {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    animation: grass2-animation 1.9s infinite linear;
+}
+
+.pipe {
+    position: absolute;
+    bottom: 70px;
+    width: 70px;
+    height: 70px;
+    animation: pipe-animation 2s infinite linear;
+}
+
+.mario {
+    width: 130px;
+    position: absolute;
+    left: 300px;
+    bottom: 70px;
+}
+
+.clouds {
+    position: absolute;
+    width: 400px;
+    top: 100px;
+    animation: clouds-animation 10s infinite linear;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -400px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes grass-animation {
+    from {
+        right: 0;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes grass2-animation {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -70px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 70;
+    }
+
+    40% {
+        bottom: 230px;
+    }
+
+    50% {
+        bottom: 230px;
+    }
+
+    60% {
+        bottom: 230px;
+    }
+
+    100% {
+        bottom: 70;
+    }
+}
